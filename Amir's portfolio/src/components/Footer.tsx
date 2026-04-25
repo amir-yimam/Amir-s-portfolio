@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Terminal, Heart } from 'lucide-react';
-
+//this is the footer of the website
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
