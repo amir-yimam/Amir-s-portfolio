@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Github } from 'lucide-react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
 import { typingRoles } from '../data/portfolio';
-
+//this is the hero section of the website
 const CODE_SYMBOLS = [
   '{}', '<>', '/>', '[]', '=>', '&&', '||', '++', '--', '!==',
   'fn()', 'async', 'await', 'const', 'let', 'return', 'import',
