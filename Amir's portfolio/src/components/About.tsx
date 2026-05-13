@@ -1,4 +1,18 @@
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Terminal, Cpu, Globe, Coffee } from 'lucide-react';
+import { stats } from '../data/portfolio';
 
+const TERMINAL_LINES = [
+  { delay: 0, text: '$ whoami', type: 'cmd' },
+  { delay: 0.6, text: 'alex_chen — software developer', type: 'out' },
+  { delay: 1.0, text: '$ cat experience.txt', type: 'cmd' },
+  { delay: 1.6, text: '> 5+ years building production systems', type: 'out' },
+  { delay: 2.0, text: '> Worked at Series-A startups & FAANG', type: 'out' },
+  { delay: 2.5, text: '$ ls skills/', type: 'cmd' },
+  { delay: 3.1, text: 'frontend/  backend/  devops/  databases/', type: 'out' },
+  { delay: 3.7, text: '$ git log --oneline | wc -l', type: 'cmd' },
+  { delay: 4.3, text: '2847', type: 'out' },
   { delay: 4.9, text: '$ echo $FAVORITE_STACK', type: 'cmd' },
   { delay: 5.5, text: 'React + TypeScript + Go + Postgres', type: 'out' },
   { delay: 6.1, text: '$ npm run build --project=life', type: 'cmd' },
