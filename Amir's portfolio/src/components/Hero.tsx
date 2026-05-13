@@ -309,4 +309,21 @@ function HeroAbstractShape() {
         <circle cx="160" cy="160" r="6" fill="#00d4ff" />
       </svg>
 
-      
+      {[
+        { x: '10%', y: '20%', size: 3, delay: 0 },
+        { x: '85%', y: '15%', size: 2, delay: 0.5 },
+        { x: '90%', y: '75%', size: 3, delay: 1 },
+        { x: '5%', y: '80%', size: 2, delay: 1.5 },
+        { x: '50%', y: '5%', size: 2, delay: 0.8 },
+      ].map((dot, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full bg-[#00d4ff]"
+          style={{ left: dot.x, top: dot.y, width: dot.size * 2, height: dot.size * 2 }}
+          animate={{ opacity: [0.2, 0.8, 0.2], scale: [0.8, 1.2, 0.8] }}
+          transition={{ duration: 3, repeat: Infinity, delay: dot.delay, ease: 'easeInOut' }}
+        />
+      ))}
+    </div>
+  );
+}
